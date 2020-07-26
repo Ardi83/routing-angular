@@ -1,4 +1,4 @@
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -22,9 +22,9 @@ export class UsersComponent {
     }
   ];
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router) {}
 
   onSelectUser(user) {
-    this.router.navigate(['user', `${user.id}`, `${user.name}`]);
+    this.router.navigate(['users', `${user.id}`, `${user.name}`]);
   }
 }
